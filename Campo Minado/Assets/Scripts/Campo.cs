@@ -7,8 +7,10 @@ public class Campo : MonoBehaviour
     bool revelada, bomba;
    [SerializeField] Sprite[] spritesVazios;
 
-    void Clicado()
+   public  void Clicado()
     {
+
+        Debug.Log("Clicado");
         if (!revelada) // ! para inverter a bool da variavel
         {
             if (bomba)
