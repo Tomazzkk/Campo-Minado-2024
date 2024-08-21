@@ -7,11 +7,17 @@ public class Campo : MonoBehaviour
     bool revelada, bomba;
    [SerializeField] Sprite[] spritesVazios;
 
-   public  void Clicado()
+    int indexI, indexJ;
+
+    public int IndexI { get => indexI; set => indexI = value; }
+    public int IndexJ { get => indexJ; set => indexJ = value; }
+    public bool Bomba { get => bomba;}
+
+    public  void Clicado()
     {
 
         Debug.Log("Clicado");
-        if (!revelada) // ! para inverter a bool da variavel
+        if (!revelada) // ! para inverter a bool da variavel no caso o "revelado" fica falso
         {
             if (bomba)
             {
@@ -19,7 +25,7 @@ public class Campo : MonoBehaviour
             }
             else
             {
-               // GetComponent<SpriteRenderer>().sprite = spritesVazios[]; 
+                GetComponent<SpriteRenderer>().sprite = spritesVazios[GameManager.instance.ChecarEntorno(indexI, indexJ)]; 
             }
         }
     }
