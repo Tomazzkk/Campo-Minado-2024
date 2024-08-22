@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Campo : MonoBehaviour
 {
-    bool revelada, bomba;
+    public bool revelada, bomba;
    [SerializeField] Sprite[] spritesVazios;
+    [SerializeField] Sprite bombaSprite;
 
     int indexI, indexJ;
 
@@ -21,13 +23,23 @@ public class Campo : MonoBehaviour
         {
             if (bomba)
             {
-                // GameOver()
+
+                GameManager.instance.GameOver();
             }
             else
             {
-                GetComponent<SpriteRenderer>().sprite = spritesVazios[GameManager.instance.ChecarEntorno(indexI, indexJ)]; 
+                revelada = true;
+                GetComponent<SpriteRenderer>().sprite = spritesVazios[GameManager.instance.ChecarEntorno(indexI, indexJ)];
+                
             }
+            
         }
+    }
+
+    public void RevelarBomba()
+    {
+        revelada = true;
+        GetComponent<SpriteRenderer>().sprite = bombaSprite;
     }
 
 }
