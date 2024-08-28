@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     Campo[,] campos;
    [SerializeField  ] GameObject campoPrefab;
-    const int diametroDoCampo = 5;
-    const  int numeroDeBombas = 10;
+    int diametroDoCampo;
+      int numeroDeBombas;
     private void Start()
     {
         GerarCampoMinado();
@@ -22,7 +22,16 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    void GerarCampoMinado()
+    public void DefinirDiametro(string value)
+    {
+        diametroDoCampo = int.Parse(value); 
+    } 
+    public void DefinirNumeroDeBombas(string value)
+    {
+            numeroDeBombas = int.Parse(value);
+        
+    }
+    public void GerarCampoMinado()
     {
        
         campos = new Campo[diametroDoCampo, diametroDoCampo];
@@ -95,14 +104,12 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        for (int i = 0; i < diametroDoCampo; i++)
+
+        foreach(Campo campo in campos)
         {
-            for (int j = 0; j < diametroDoCampo; j++)
+            if (campo.bomba)
             {
-                if (campos[i, j].bomba)
-                {
-                    campos[i, j].RevelarBomba();
-                }
+                campo.RevelarBomba();
             }
         }
     }

@@ -123,61 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &577707361
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 577707363}
-  - component: {fileID: 577707362}
-  m_Layer: 0
-  m_Name: Campo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &577707362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577707361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5077b4b2438486479c15cf9d1d9cfc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spritesVazios:
-  - {fileID: 21300000, guid: ec277c6094c18e44daaf14622c4a80be, type: 3}
-  - {fileID: 21300000, guid: e1e185813077683468e6fa9f74ecdb46, type: 3}
-  - {fileID: 21300000, guid: 361d87578b9ba404a89c18105c64d080, type: 3}
-  - {fileID: 21300000, guid: a9f9e7bb5f03397499c6bb29cff01343, type: 3}
-  - {fileID: 21300000, guid: 16bb7329777edae46ad4195ec320c53f, type: 3}
-  - {fileID: 21300000, guid: 1008c02d9423fa5409d066501d89b44b, type: 3}
-  - {fileID: 21300000, guid: 33b4ff0a78135064ea6577df46b39bf1, type: 3}
-  - {fileID: 21300000, guid: 75a7071338e5b8840b4593b63bc248d0, type: 3}
-  - {fileID: 21300000, guid: 2a392f8c2674c5b4e9e5652f5492f218, type: 3}
-  - {fileID: 21300000, guid: bff2c0e98c89f614896515e2caa37350, type: 3}
---- !u!4 &577707363
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577707361}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.743468, y: 2.509598, z: -0.008480582}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &996501550
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,4 +352,3 @@ SceneRoots:
   - {fileID: 1874838484}
   - {fileID: 996501552}
   - {fileID: 2008547480}
-  - {fileID: 577707363}
